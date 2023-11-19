@@ -24,7 +24,14 @@ copyButton.textContent = "COPY";
 copyButton.className = "copyButtonStyle";
 
 // 削除するクラス名のリストを定義します
-let classesToRemove = ["np-image", "authors", "np-heading-index", "copyright-notation"];
+let classesToRemove = [
+  "authors", // 記事先頭の作者エリア
+  "copyright-notation", // 記事下部の取材・執筆
+  "np-article-block", // 記事中の別記事リンク
+  "np-embedded", // 記事中のSNS埋め込み
+  "np-heading-index", // 記事先頭の目次
+  "np-image", // 記事中の画像エリア
+];
 
 // COPYボタンにクリックイベントリスナーを追加します
 copyButton.addEventListener("click", function () {
